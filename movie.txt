@@ -1,0 +1,30 @@
+themoviedb.org/settings/profile
+https://api.themoviedb.org/3/movie/popular?api_key=81db1dc62395c3245a614c4ac5e8284e
+https://api.themoviedb.org/3/genre/movie/list?api_key=81db1dc62395c3245a614c4ac5e8284e <- for genres
+'https://api.themoviedb.org/3/movie/'.$movie_id.'?api_key=81db1dc62395c3245a614c4ac5e8284e&append_to_response=credits,videos,images'
+
+
+ 'poster_path'=>'https://image.tmdb.org/t/p/w342/'.$movie['poster_path'],
+
+cleaning unauthorize api with token
+$popularMovies = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/movie/popular')
+            ->json();
+
+Go to config>serviecs and add followin code
+ 'tmdb' => [
+        'token' => env('TMDB_TOKEN'),
+    ],
+
+1 make component for MovieCard -> php artisan make:component MovieCard
+2 install livewire -> for dropdown  &  -> php artisan make:live-wire SearchDropdown
+3 install alpine js ->  for ui interactivity
+4 install viewModel package -> for refactoring to MoviesViewModel->php artisan make:view-model MoviesViewModel
+
+
+used for infinited scroll in actor>index
+https://infinite-scroll.com/demo/full-page/
+
+https://via.placeholder.com/300x450?text=
+https://ui-avatars.com/api/size=235&name=
+loading.io

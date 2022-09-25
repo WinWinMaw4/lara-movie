@@ -1,0 +1,149 @@
+$primary: #fd7200;
+$secondary: #fd923c;
+$border-radius:.2rem;
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "../../node_modules/venobox/dist/venobox.min.css";
+
+body{
+    background: $dark;
+    color:$light;
+}
+.active{
+    color:#fd923c !important;
+    //background-color: rgba(245, 171, 110, 0.78);
+}
+
+
+//custom scroll bar
+
+/*    scrollbar*/
+/* Firefox */
+.custom-scroll-bar {
+    scrollbar-width: thin;
+    scrollbar-color: #606060 rgba(184, 192, 194, 0.15);
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar,.custom-scroll-bar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+*::-webkit-scrollbar-track,.custom-scroll-bar::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: rgba(184, 192, 194, 0.15);
+}
+
+*::-webkit-scrollbar-track:hover,.custom-scroll-bar::-webkit-scrollbar-track:hover {
+    background-color: rgba(184, 192, 194, 0.15);
+}
+
+*::-webkit-scrollbar-track:active ,.custom-scroll-bar::-webkit-scrollbar-track:active {
+    background-color: rgba(184, 192, 194, 0.15);
+}
+
+*::-webkit-scrollbar-thumb,.custom-scroll-bar::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #606060;
+}
+
+*::-webkit-scrollbar-thumb:hover,.custom-scroll-bar::-webkit-scrollbar-thumb:hover {
+    background-color: #777676;
+}
+
+*::-webkit-scrollbar-thumb:active,.custom-scroll-bar::-webkit-scrollbar-thumb:active {
+    background-color: #777676;
+}
+
+//end custon scroll bar
+
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .fs-5{
+        font-size: .8rem !important;
+    }
+    .cast-name {
+        font-size: medium !important;
+        font-weight: bold;
+    }
+    .cast-character{
+        font-size: small !important;
+    }
+    .popular-card{
+        max-height: 200px !important;
+    }
+    .popular-card>.card-img>img{
+        object-position: bottom;
+    }
+    .nowPlaying-card>.card-img{
+        height: auto !important;
+    }
+    .actor_detail_position_sticky{
+        position: relative !important;
+    }
+
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .fs-5{
+        font-size: 1rem !important;
+    }
+    .fs-6{
+        font-size: .7rem !important;
+    }
+    .movie-show-img-div{
+        width: 50% !important;
+    }
+    .popular-card{
+        max-height: 200px !important;
+    }
+    .popular-card>.card-img>img{
+        object-position: bottom;
+    }
+    .search-div{
+        width: 85% !important;
+
+    }
+    .search-input{
+        //background-color: transparent !important;
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .search-div{
+        width: 75% !important;
+
+    }
+}
+//
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+
+
+}
+//
+//// X-Large devices (large desktops, less than 1400px)
+//@media (max-width: 1399.98px) { ... }
+//
+//// XX-Large devices (larger desktops)
+//// No media query since the xxl breakpoint has no upper bound on its width
+
+@media (min-width: 1199px) {
+    .actor_detail_position_sticky{
+        position: sticky !important;
+        top: 0 !important;
+    }
+    .popular-overflow-overlay{
+        overflow: hidden !important;
+    }
+    .popular-overflow-overlay:hover{
+        overflow: overlay !important;
+    }
+}
+
+
+
+
